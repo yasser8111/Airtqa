@@ -5,27 +5,27 @@ import Button from "../common/Button";
 const newsItems = [
   {
     id: 1,
-    title: "يفيضي شمخمخش شخض",
-    excerpt: "مشيربض - شبعض يبي شيخيقي ش يل شيخش يبي شيربي ذي يبيلي ...",
-    date: "12 أكتوبر 2025",
+    title: "إطلاق المبادرة الوطنية للتشجير",
+    excerpt: "تهدف المبادرة إلى زراعة مليون شجرة في مختلف مناطق المملكة لتعزيز الغطاء النباتي ومكافحة التصحر...",
+    date: "15 أكتوبر 2025",
     image:
-      "https://images.unsplash.com/photo-1544531586-fde5298cdd40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 2,
-    title: "يعشيوي ضحي يبي شخشيصي شحشي",
-    excerpt: "ضحي يبي شبعض يبي شيخيقي ش يل شيخش يبي شيربي ذي يبيلي ...",
-    date: "10 أكتوبر 2025",
+    title: "توقيع اتفاقية تعاون في مجال الطاقة المتجددة",
+    excerpt: "تم اليوم توقيع اتفاقية استراتيجية تهدف إلى تطوير مشاريع الطاقة الشمسية والرياح لتعزيز الاستدامة...",
+    date: "12 أكتوبر 2025",
     image:
-      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 3,
-    title: "يفيضي شمخمخش شخض",
-    excerpt: "مشيربض - شبعض يبي شيخيقي ش يل شيخش يبي شيربي ذي يبيلي ...",
-    date: "08 أكتوبر 2025",
+    title: "افتتاح المركز التقني الجديد للابتكار و الرمجة",
+    excerpt: "يعد المركز منصة رائدة لدعم الشركات الناشئة وتطوير الحلول التقنية المتقدمة في المنطقة...",
+    date: "10 أكتوبر 2025",
     image:
-      "https://images.unsplash.com/photo-1544531586-fde5298cdd40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   },
 ];
 
@@ -48,7 +48,7 @@ const NewsSection = () => {
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute top-4 right-4 bg-blue text-white text-xs px-3 py-1 rounded-full">
+                <div className="absolute top-4 right-4 bg-blue text-white text-xs px-3 py-1">
                   {item.date}
                 </div>
               </div>

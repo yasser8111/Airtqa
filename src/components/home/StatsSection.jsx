@@ -8,7 +8,7 @@ const stats = [
 
 const StatsSection = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-40 bg-white">
       <div className="container-custom">
         <div className="flex flex-wrap justify-center gap-10 md:gap-32">
           {stats.map((stat, index) => (
