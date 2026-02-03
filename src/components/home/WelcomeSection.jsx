@@ -8,19 +8,18 @@ const WelcomeSection = () => {
 
       <div className="container-custom flex flex-col items-center text-center relative z-10">
         {/* Title / Calligraphy Placeholder */}
-        <div className="mb-16 transform hover:scale-105 transition-transform duration-500">
+        <div className="mb-16">
           {/* Using text for now as we don't have the calligraphy SVGs */}
           <img
             src="/welcame.svg"
             alt="أهلاً وسهلاً ومرحباً بكم"
             className="h-32 w-auto mx-auto drop-shadow-sm"
           />
-          <div className="h-1 w-32 bg-gold mx-auto mt-6 rounded-full"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-1 gap-10 max-w-4xl w-full px-4">
           {/* Vision */}
-          <div className="flex flex-col md:flex-row-reverse items-start gap-6 group hover:bg-white p-6 rounded-2xl transition-all duration-300 hover:shadow-lg border border-transparent hover:border-gray-100">
+          <div className="flex flex-col md:flex-row-reverse items-start gap-6 group hover:bg-white p-6 transition-all duration-300 hover:shadow-lg border border-transparent hover:border-gray-100">
             <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center shrink-0 text-gold group-hover:bg-gold group-hover:text-white transition-colors duration-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +53,7 @@ const WelcomeSection = () => {
           </div>
 
           {/* Mission */}
-          <div className="flex flex-col md:flex-row-reverse items-start gap-6 group hover:bg-white p-6 rounded-2xl transition-all duration-300 hover:shadow-lg border border-transparent hover:border-gray-100">
+          <div className="flex flex-col md:flex-row-reverse items-start gap-6 group hover:bg-white p-6  transition-all duration-300 hover:shadow-lg border border-transparent hover:border-gray-100">
             <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center shrink-0 text-gold group-hover:bg-gold group-hover:text-white transition-colors duration-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +82,7 @@ const WelcomeSection = () => {
           </div>
 
           {/* Goals */}
-          <div className="flex flex-col md:flex-row-reverse items-start gap-6 group hover:bg-white p-6 rounded-2xl transition-all duration-300 hover:shadow-lg border border-transparent hover:border-gray-100">
+          <div className="flex flex-col md:flex-row-reverse items-start gap-6 group hover:bg-white p-6  transition-all duration-300 hover:shadow-lg border border-transparent hover:border-gray-100">
             <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center shrink-0 text-gold group-hover:bg-gold group-hover:text-white transition-colors duration-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

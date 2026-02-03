@@ -5,7 +5,7 @@ const Hero = () => {
     <>
       <div className="absolute inset-0">
         <img
-          src="/HERO.png"
+          src="/hero-bg.png"
           alt="Background"
           className="w-full h-full max-h-[650px] object-contain"
         />
@@ -18,7 +18,7 @@ const Hero = () => {
             <br />
             بأخلاقنا وعلمنا
           </h1>
-          <p className="mt-6 text-2xl text-gold font-bold tracking-wide mb-30">
+          <p className="mt-6 text-2xl text-gold font-bold tracking-wide mb-40">
             Rising with Ethics and Knowledge
           </p>
 
