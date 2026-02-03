@@ -1,13 +1,11 @@
 import React from "react";
+import SectionTitle from "../common/SectionTitle";
 
 const MapSection = () => {
   return (
     <section className="relative h-[500px] w-full bg-gray-200">
-      <div className="absolute top-0 right-0 z-10 p-8 pointer-events-none">
-        <div className="bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg pointer-events-auto">
-          <h2 className="text-3xl font-bold text-dark mb-1">الخريطة</h2>
-          <div className="h-1 w-12 bg-gold rounded-full"></div>
-        </div>
+      <div className="absolute top-10 right-10 z-10 p-8 pointer-events-none">
+        <SectionTitle>الخريطة</SectionTitle>
       </div>
 
       <iframe
@@ -21,7 +19,7 @@ const MapSection = () => {
       ></iframe>
 
       {/* Decorative gradient overlay at bottom to blend with footer if needed */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-linear-to-t from-white to-transparent pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-linear-to-t from-light to-transparent pointer-events-none"></div>
     </section>
   );
 };

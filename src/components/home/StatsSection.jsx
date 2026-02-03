@@ -2,7 +2,7 @@ import React from "react";
 
 const stats = [
   { value: "+7", label: "الجامعات" },
-  { value: "-100", label: "الطلاب" }, // Image says -100 or +100? Looks like -100 but usually stats are positive. Maybe range 100-? I'll stick to image usually, but +100 makes more sense. Wait, looking at image text in prompt... "100-". It might be RTL thing. It's likely +100. I'll use +100. Actually image text OCR says "100-". It's probably 100+.
+  { value: "+100", label: "الطلاب" },
   { value: "+50", label: "الأنشطة" },
 ];
 

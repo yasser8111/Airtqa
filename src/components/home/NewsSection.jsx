@@ -9,7 +9,7 @@ const newsItems = [
     excerpt: "مشيربض - شبعض يبي شيخيقي ش يل شيخش يبي شيربي ذي يبيلي ...",
     date: "12 أكتوبر 2025",
     image:
-      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1544531586-fde5298cdd40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 2,
@@ -33,18 +33,13 @@ const NewsSection = () => {
   return (
     <section className="py-20 bg-gray-50">
       <div className="container-custom">
-        <div className="flex flex-col items-center mb-12">
-          <h2 className="text-4xl font-bold text-dark mb-4 text-center">
-            آخر <span className="text-gold">الأخبار</span>
-          </h2>
-          <div className="h-1 w-20 bg-blue rounded-full"></div>
-        </div>
+        <SectionTitle>آخر الأخبار</SectionTitle>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {newsItems.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group"
+              className="bg-light overflow-hidden group"
             >
               <div className="relative h-64 overflow-hidden">
                 <img
@@ -67,7 +62,7 @@ const NewsSection = () => {
                 </p>
                 <a
                   href="#"
-                  className="inline-flex items-center text-gold font-bold hover:text-blue transition-colors"
+                  className="inline-flex items-center text-muted font-bold hover:text-blue transition-colors"
                 >
                   قراءة المزيد
                   <svg

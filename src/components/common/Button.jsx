@@ -9,6 +9,7 @@ const Button = ({
   const variants = {
     primary: "bg-blue text-white hover:opacity-90",
     secondary: "bg-gold text-dark hover:opacity-90",
+    outline: "bg-transparent text-blue hover:opacity-90",
   };
 
   return (
