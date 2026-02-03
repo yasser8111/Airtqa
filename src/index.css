@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "NeoSansArabic";
+  src: url("./assets/fonts/NeoSansArabic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NeoSansArabic";
+  src: url("./assets/fonts/NeoSansArabicBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NeoSansArabic";
+  src: url("./assets/fonts/NeoSansArabicMedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NeoSansArabic";
+  src: url("./assets/fonts/NeoSansArabicLight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@theme {
+  --color-blue: #0a4979;
+  --color-gold: #dca148;
+  --color-light: #eaeff6;
+  --color-dark: #334155;
+  --color-muted: #64748b;
+  --spacing-header-h: 80px;
+  --font-sans: "NeoSansArabic", system-ui, sans-serif;
+}
+
+body {
+  font-family: "NeoSansArabic", system-ui, sans-serif;
+}
+
+@utility container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
