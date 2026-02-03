@@ -17,9 +17,6 @@ const MapSection = () => {
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
-
-      {/* Decorative gradient overlay at bottom to blend with footer if needed */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-linear-to-t from-light to-transparent pointer-events-none"></div>
     </section>
   );
 };

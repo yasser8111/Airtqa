@@ -1,6 +1,6 @@
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
-import Hero from "../components/home/Hero";
+import HeroSection from "../components/home/HeroSection";
 import WelcomeSection from "../components/home/WelcomeSection";
 import NewsSection from "../components/home/NewsSection";
 import PartnersSection from "../components/home/PartnersSection";
@@ -13,7 +13,7 @@ function Home() {
       <Header />
 
       <main className="flex flex-col">
-        <Hero />
+        <HeroSection />
         <WelcomeSection />
         <NewsSection />
         <PartnersSection />

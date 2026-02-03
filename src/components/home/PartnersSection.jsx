@@ -7,27 +7,33 @@ const PartnersSection = () => {
       <div className="container-custom">
         <SectionTitle>شركاؤنا</SectionTitle>
 
-        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
-          {/* Placeholder Logos */}
-          <div className="h-24 w-48 flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+        <div className="flex flex-wrap justify-center items-center gap-8 mt-12">
+          <div className="h-50 w-50 flex items-center justify-center p-8 bg-light">
             <img
               src="/co-1.svg"
               alt="Partner 1"
-              className="max-h-full max-w-full"
+              className="max-h-full max-w-full object-contain"
             />
           </div>
-          <div className="h-24 w-48 flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+          <div className="h-50 w-50 flex items-center justify-center p-8 bg-light">
             <img
               src="/co-2.svg"
               alt="Partner 2"
-              className="max-h-full max-w-full"
+              className="max-h-full max-w-full object-contain"
             />
           </div>
-          <div className="h-24 w-48 flex items-center justify-center p-4 hover:scale-110 transition-transform duration-300">
+          <div className="h-50 w-50 flex items-center justify-center p-8 bg-light">
             <img
               src="/co-1.svg"
               alt="Partner 1"
-              className="max-h-full max-w-full"
+              className="max-h-full max-w-full object-contain"
+            />
+          </div>
+          <div className="h-50 w-50 flex items-center justify-center p-8 bg-light">
+            <img
+              src="/co-2.svg"
+              alt="Partner 2"
+              className="max-h-full max-w-full object-contain"
             />
           </div>
         </div>

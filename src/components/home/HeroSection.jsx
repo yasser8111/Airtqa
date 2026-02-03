@@ -1,6 +1,6 @@
 import Button from "../common/Button";
 
-const Hero = () => {
+const HeroSection = () => {
   return (
     <>
       <div className="absolute inset-0">
@@ -29,4 +29,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroSection;
