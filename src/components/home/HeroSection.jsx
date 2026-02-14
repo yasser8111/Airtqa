@@ -22,7 +22,17 @@ const HeroSection = () => {
             Rising with Ethics and Knowledge
           </p>
 
-          <Button variant="primary" className="scale-120">ابدأ الان</Button>
+          <Button
+            variant="primary"
+            className="scale-120"
+            onClick={() =>
+              document
+                .getElementById("Welcome")
+                .scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            ابدأ الان
+          </Button>
         </div>
       </div>
     </>
