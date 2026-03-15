@@ -1,11 +1,12 @@
 import React from "react";
-import SectionTitle from "../common/SectionTitle";
 
 const PartnersSection = () => {
   return (
-    <section className="py-40 bg-white">
+    <section className="min-h-[calc(70dvh-80px)] flex flex-col justify-center items-center">
       <div className="container-custom">
-        <SectionTitle>شركاؤنا</SectionTitle>
+        <h2 className="text-4xl font-extrabold text-blue tracking-tight mb-12">
+          شركاؤنا
+        </h2>
 
         <div className="flex flex-wrap justify-center items-center gap-8 mt-12">
           <div className="h-50 w-50 flex items-center justify-center p-8 bg-light">

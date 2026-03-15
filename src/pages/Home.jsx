@@ -9,7 +9,7 @@ import MapSection from "../components/home/MapSection";
 
 function Home() {
   return (
-    <div className="min-h-screen bg-white font-sans" dir="rtl">
+    <div className="bg-white font-sans" dir="rtl">
       <Header />
 
       <main className="flex flex-col">
@@ -18,7 +18,7 @@ function Home() {
         <NewsSection />
         <PartnersSection />
         <StatsSection />
-        <MapSection />
+        {/* <MapSection /> */}
       </main>
 
       <Footer />

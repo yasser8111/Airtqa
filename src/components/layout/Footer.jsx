@@ -61,7 +61,7 @@ const Footer = () => {
 
       <div className="container-custom mt-8 pt-6 border-t border-gray-50 text-center text-xs text-muted flex justify-between items-center">
         <span>
-          Develop by <span className="text-gold font-bold">Yasser Al-nahdi</span>
+          Develop & Design by <span className="text-gold font-bold">Yasser Al-nahdi</span> & <span className="text-gold font-bold">Abdulrahman kalid</span>
         </span>
         <span>
           &copy; {new Date().getFullYear()} مركز الارتقاء الجامعي. جميع الحقوق

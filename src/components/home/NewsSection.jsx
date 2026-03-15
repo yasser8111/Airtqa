@@ -5,108 +5,79 @@ import Button from "../common/Button";
 const newsItems = [
   {
     id: 1,
-    category: "مبادرات",
-    title: "إطلاق المبادرة الوطنية للتشجير في سكن الطلاب",
-    excerpt:
-      "تهدف المبادرة إلى تحسين البيئة المحيطة بالسكن وزيادة المساحات الخضراء لتهيئة جو صحي للطلاب...",
+    title:
+      "بصمة الارتقاء: مركز الارتقاء الجامعي يطلق حملة توزيع السلة الرمضانية للأسر المحتاجة",
+    descrption: [
+      "أطلق مركز الارتقاء الجامعي، الذي تشرف عليه جمعية رعاية طالب العلم، حملة 'بصمة الارتقاء' لتوزيع السلة الرمضانية للأسر المحتاجة، ضمن أنشطة وفعاليات أسبوع الإبداع السادس. تهدف هذه الحملة إلى تحسين أوضاع الأسر المتعففة وتوفير احتياجاتهم الأساسية استعدادًا لاستقبال شهر رمضان المبارك.",
+      "جرى توزيع السلال الرمضانية إلى بيوت المستفيدين من الحملة، محملين بالمواد الغذائية الأساسية التي تسهم في تخفيف العبء عن كاهل الأسر المحتاجة. هذه المبادرة تعكس روح التكافل المجتمعي التي يتحلى بها طلاب المركز، وتعزز قيم التضامن والمسؤولية الاجتماعية. وأكد المركز أن حملة 'بصمة الارتقاء' تعد نموذجًا رائعًا للتعاون البناء بين مختلف شرائح المجتمع لتحقيق الأهداف الإنسانية النبيلة، مشيرًا إلى أن هذه المبادرة تعزز قيم العطاء والإحسان في المجتمع وتؤكد أهمية العمل التطوعي في تعزيز التكافل الاجتماعي.",
+      "وثقت عدسات المركز لحظات توزيع السلال الرمضانية، حيث عبر المستفيدون عن شكرهم وامتنانهم لهذه المبادرة الإنسانية.",
+      "ويعبر مركز الارتقاء الجامعي عن شكره وتقديره لكل من ساهم في إنجاح حملة 'بصمة الارتقاء'، مؤكدًا على أهمية استمرار مثل هذه المبادرات التي تعزز من قيم التكافل والعطاء في المجتمع.",
+    ],
     date: "15 أكتوبر 2025",
-    image:
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "/testImg.jpeg",
   },
   {
-    id: 2,
-    category: "اتفاقيات",
-    title: "توقيع اتفاقية تعاون لتوفير وجبات غذائية مدعومة",
-    excerpt:
-      "تم توقيع اتفاقية مع كبرى المطاعم لتوفير وجبات صحية وبأسعار مخفضة لطلاب السكن بمواصفات عالية...",
-    date: "12 أكتوبر 2025",
-    image:
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    id: 1,
+    title:
+      "بصمة الارتقاء: مركز الارتقاء الجامعي يطلق حملة توزيع السلة الرمضانية للأسر المحتاجة",
+    descrption: [
+      "أطلق مركز الارتقاء الجامعي، الذي تشرف عليه جمعية رعاية طالب العلم، حملة 'بصمة الارتقاء' لتوزيع السلة الرمضانية للأسر المحتاجة، ضمن أنشطة وفعاليات أسبوع الإبداع السادس. تهدف هذه الحملة إلى تحسين أوضاع الأسر المتعففة وتوفير احتياجاتهم الأساسية استعدادًا لاستقبال شهر رمضان المبارك.",
+      "جرى توزيع السلال الرمضانية إلى بيوت المستفيدين من الحملة، محملين بالمواد الغذائية الأساسية التي تسهم في تخفيف العبء عن كاهل الأسر المحتاجة. هذه المبادرة تعكس روح التكافل المجتمعي التي يتحلى بها طلاب المركز، وتعزز قيم التضامن والمسؤولية الاجتماعية. وأكد المركز أن حملة 'بصمة الارتقاء' تعد نموذجًا رائعًا للتعاون البناء بين مختلف شرائح المجتمع لتحقيق الأهداف الإنسانية النبيلة، مشيرًا إلى أن هذه المبادرة تعزز قيم العطاء والإحسان في المجتمع وتؤكد أهمية العمل التطوعي في تعزيز التكافل الاجتماعي.",
+      "وثقت عدسات المركز لحظات توزيع السلال الرمضانية، حيث عبر المستفيدون عن شكرهم وامتنانهم لهذه المبادرة الإنسانية.",
+      "ويعبر مركز الارتقاء الجامعي عن شكره وتقديره لكل من ساهم في إنجاح حملة 'بصمة الارتقاء'، مؤكدًا على أهمية استمرار مثل هذه المبادرات التي تعزز من قيم التكافل والعطاء في المجتمع.",
+    ],
+    date: "15 أكتوبر 2025",
+    image: "/testImg.jpeg",
   },
   {
-    id: 3,
-    category: "تقنية",
-    title: "تدشين نظام رقمي جديد لإدارة مرافق السكن",
-    excerpt:
-      "أصبح بإمكان الطلاب الآن طلب الصيانة أو حجز القاعات عبر تطبيق إلكتروني سهل الاستخدام وبكبسة زر واحدة...",
-    date: "10 أكتوبر 2025",
-    image:
-      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    id: 1,
+    title:
+      "بصمة الارتقاء: مركز الارتقاء الجامعي يطلق حملة توزيع السلة الرمضانية للأسر المحتاجة",
+    descrption: [
+      "أطلق مركز الارتقاء الجامعي، الذي تشرف عليه جمعية رعاية طالب العلم، حملة 'بصمة الارتقاء' لتوزيع السلة الرمضانية للأسر المحتاجة، ضمن أنشطة وفعاليات أسبوع الإبداع السادس. تهدف هذه الحملة إلى تحسين أوضاع الأسر المتعففة وتوفير احتياجاتهم الأساسية استعدادًا لاستقبال شهر رمضان المبارك.",
+      "جرى توزيع السلال الرمضانية إلى بيوت المستفيدين من الحملة، محملين بالمواد الغذائية الأساسية التي تسهم في تخفيف العبء عن كاهل الأسر المحتاجة. هذه المبادرة تعكس روح التكافل المجتمعي التي يتحلى بها طلاب المركز، وتعزز قيم التضامن والمسؤولية الاجتماعية. وأكد المركز أن حملة 'بصمة الارتقاء' تعد نموذجًا رائعًا للتعاون البناء بين مختلف شرائح المجتمع لتحقيق الأهداف الإنسانية النبيلة، مشيرًا إلى أن هذه المبادرة تعزز قيم العطاء والإحسان في المجتمع وتؤكد أهمية العمل التطوعي في تعزيز التكافل الاجتماعي.",
+      "وثقت عدسات المركز لحظات توزيع السلال الرمضانية، حيث عبر المستفيدون عن شكرهم وامتنانهم لهذه المبادرة الإنسانية.",
+      "ويعبر مركز الارتقاء الجامعي عن شكره وتقديره لكل من ساهم في إنجاح حملة 'بصمة الارتقاء'، مؤكدًا على أهمية استمرار مثل هذه المبادرات التي تعزز من قيم التكافل والعطاء في المجتمع.",
+    ],
+    date: "15 أكتوبر 2025",
+    image: "/testImg.jpeg",
   },
 ];
 
 const NewsSection = () => {
   return (
-    <section className="py-24 bg-light/30 relative" id="News">
+    <section className="min-h-[calc(100dvh-80px)] flex flex-col justify-center items-center bg-light/50" id="News">
       <div className="container-custom relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-          <div className="text-right">
-            <h2 className="text-4xl font-extrabold text-blue tracking-tight">
-              آخر الأخبار والفعاليات
-            </h2>
-          </div>
-          <div className="mt-auto">
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 text-blue font-bold group/link"
-            >
-              <span className="relative">
-                كل الاخبار
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue transition-all duration-300 group-hover/link:w-full"></span>
-              </span>
-            </a>
-          </div>
-        </div>
+        <h2 className="text-4xl font-extrabold text-blue tracking-tight mb-12">
+          آخر الأخبار والفعاليات
+        </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 lg:gap-10">
           {newsItems.map((item) => (
             <article
               key={item.id}
-              className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100/50 flex flex-col hover:-translate-y-1"
+              className="bg-white rounded-2xl overflow-hidden border-2 border-gray-100 shadow-blue/10 hover:shadow-xl transition-all duration-300 group flex flex-col  hover:-translate-y-1 hover:scale-105"
             >
               {/* Image Container */}
               <div className="relative h-64 overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-                {/* Category Tag */}
-                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-blue text-xs font-bold px-4 py-1.5 rounded-full shadow-sm">
-                  {item.category}
-                </div>
               </div>
 
-              {/* Content */}
-              <div className="p-8 flex flex-col flex-1 text-right">
-                <h3 className="text-2xl font-bold text-dark mb-4 group-hover:text-blue transition-colors line-clamp-2 leading-snug">
+              <div className="p-3 flex flex-col flex-1 text-right my-2">
+                <h3 className="text-lg font-medium text-dark mb-1 line-clamp-2 leading-snug">
                   {item.title}
                 </h3>
-
-                <p className="text-muted mb-8 line-clamp-3 leading-relaxed text-lg">
-                  {item.excerpt}
-                </p>
-
-                <div className="mt-auto">
-                  <a
-                    href="#"
-                    className="inline-flex items-center gap-2 text-blue font-bold group/link"
-                  >
-                    <span className="relative">
-                      إقرأ المزيد
-                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue transition-all duration-300 group-hover/link:w-full"></span>
-                    </span>
-                  </a>
-                </div>
               </div>
             </article>
           ))}
         </div>
 
-        <div className="mt-12 text-center md:hidden">
-          <Button variant="outline" className="w-full">
+        <div className="mt-4 text-end">
+          <Button variant="outline">
             عرض كل الأخبار
           </Button>
         </div>
