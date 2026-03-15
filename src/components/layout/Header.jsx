@@ -66,7 +66,7 @@ function Header({ onNavigate }) {
             isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"
           }`}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-white via-blue/5 to-white -z-10"></div>
+          <div className="absolute inset-0 bg-linear-to-b from-white via-blue/5 to-white -z-10"></div>
           
           <div className="absolute top-[-5%] left-[-5%] w-72 h-72 bg-gold/5 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-[-5%] right-[-5%] w-72 h-72 bg-blue/5 rounded-full blur-3xl animate-pulse"></div>
