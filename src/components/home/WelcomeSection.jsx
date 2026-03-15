@@ -85,17 +85,18 @@ const WelcomeSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {items.map((item, index) => (
-            <div
-              key={index}
-              className={`bg-white p-8 rounded-2xl border-2 border-gray-100 shadow-blue/10 hover:shadow-xl transition-all duration-300 group flex flex-col hover:-translate-y-1 reveal reveal-delay-${index + 1}`}
-            >
-              <div className="w-16 h-16 rounded-2xl bg-gold/10 flex items-center justify-center text-gold mb-6 group-hover:bg-gold group-hover:text-white transition-all">
-                {item.icon}
+            <div key={index} className={`reveal reveal-delay-${index + 1}`}>
+              <div
+                className="bg-white p-8 rounded-2xl border-2 border-gray-100 shadow-blue/10 hover:shadow-xl transition-all duration-300 group flex flex-col hover:-translate-y-2"
+              >
+                <div className="w-16 h-16 rounded-2xl bg-gold/10 flex items-center justify-center text-gold mb-6 group-hover:bg-gold group-hover:text-white transition-all">
+                  {item.icon}
+                </div>
+                <h3 className="text-2xl font-bold text-blue mb-4">
+                  {item.title}
+                </h3>
+                <p className="text-blue/50 leading-relaxed text-lg">{item.desc}</p>
               </div>
-              <h3 className="text-2xl font-bold text-dark mb-4">
-                {item.title}
-              </h3>
-              <p className="text-muted leading-relaxed text-lg">{item.desc}</p>
             </div>
           ))}
         </div>

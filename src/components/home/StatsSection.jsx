@@ -55,14 +55,13 @@ const StatsSection = () => {
     <section className="min-h-[calc(70dvh-80px)] flex flex-col justify-center items-center bg-light/50 overflow-hidden">
       <div className="container-custom flex flex-col md:flex-row justify-around w-full gap-12 md:gap-0">
         {stats.map((stat, index) => (
-          <div 
-            key={index} 
-            className={`flex flex-col items-center gap-5 reveal reveal-delay-${index + 1}`}
-          >
-            <span className="text-6xl font-bold text-blue">
-              <CountUp end={stat.value} />+
-            </span>
-            <span className="text-2xl font-bold text-blue/50">{stat.label}</span>
+          <div key={index} className={`reveal reveal-delay-${index + 1}`}>
+            <div className="flex flex-col items-center gap-5">
+              <span className="text-6xl font-bold text-blue">
+                <CountUp end={stat.value} />+
+              </span>
+              <span className="text-2xl font-bold text-blue/50">{stat.label}</span>
+            </div>
           </div>
         ))}
       </div>
