@@ -7,15 +7,15 @@ import PartnersSection from "../components/home/PartnersSection";
 import StatsSection from "../components/home/StatsSection";
 import MapSection from "../components/home/MapSection";
 
-function Home() {
+function Home({ onNavigate }) {
   return (
     <div className="bg-white font-sans" dir="rtl">
-      <Header />
+      <Header onNavigate={onNavigate} />
 
       <main className="flex flex-col">
         <HeroSection />
         <WelcomeSection />
-        <NewsSection />
+        <NewsSection onNavigate={onNavigate} />
         <PartnersSection />
         <StatsSection />
         {/* <MapSection /> */}
