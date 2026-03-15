@@ -72,7 +72,7 @@ const WelcomeSection = () => {
 
   return (
     <section className="min-h-[calc(100dvh-80px)] flex flex-col justify-center items-center" id="Welcome">
-      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] opacity-30"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] bg-size-[24px_24px] opacity-30"></div>
 
       <div className="container-custom relative z-10 px-4">
         <div className="text-center mb-16">
