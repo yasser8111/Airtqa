@@ -45,25 +45,29 @@ const CountUp = ({ end, duration = 2000 }) => {
 };
 
 const stats = [
-  { value: "7", label: "الجامعات" },
+  { value: "10", label: "الجامعات" },
   { value: "100", label: "الطلاب" },
   { value: "50", label: "الأنشطة" },
 ];
 
 const StatsSection = () => {
   return (
-    <section className="min-h-[calc(70dvh-80px)] flex flex-col justify-center items-center bg-light/50 overflow-hidden">
-      <div className="container-custom flex flex-col md:flex-row justify-around w-full gap-12 md:gap-0">
-        {stats.map((stat, index) => (
-          <div key={index} className={`reveal reveal-delay-${index + 1}`}>
-            <div className="flex flex-col items-center gap-5">
-              <span className="text-6xl font-bold text-blue">
-                <CountUp end={stat.value} />+
-              </span>
-              <span className="text-2xl font-bold text-blue/50">{stat.label}</span>
+    <section className="min-h-[40vh] md:min-h-[60vh] flex flex-col justify-center items-center bg-light/30 py-16 md:py-24 overflow-hidden">
+      <div className="container-custom w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 sm:gap-8 lg:gap-24 items-center justify-items-center">
+          {stats.map((stat, index) => (
+            <div key={index} className={`reveal reveal-delay-${index + 1} w-full`}>
+              <div className="flex flex-col items-center gap-3 md:gap-5 text-center px-4">
+                <span className="text-5xl md:text-6xl lg:text-7xl font-bold text-blue leading-none">
+                  <CountUp end={stat.value} />+
+                </span>
+                <span className="text-xl md:text-2xl font-bold text-blue/40 tracking-wide uppercase">
+                  {stat.label}
+                </span>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

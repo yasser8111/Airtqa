@@ -55,8 +55,41 @@ function App() {
   }, [currentPage, selectedNewsId]);
 
   const handleNavigate = (page, id = null) => {
+    if (page.startsWith("#")) {
+      const targetId = page.substring(1);
+      
+      const scrollToElement = () => {
+        const el = document.getElementById(targetId);
+        if (el) {
+          // حساب الموقع بحيث يكون العنصر في منتصف الشاشة تقريباً
+          const elementRect = el.getBoundingClientRect();
+          const absoluteElementTop = elementRect.top + window.pageYOffset;
+          const middleOffset = (window.innerHeight - elementRect.height) / 2;
+          
+          // إذا كان العنصر أطول من الشاشة، نكتفي بترك مساحة للهيدر
+          const finalOffset = elementRect.height > window.innerHeight 
+            ? absoluteElementTop - 100 
+            : absoluteElementTop - middleOffset;
+
+          window.scrollTo({
+            top: finalOffset,
+            behavior: "smooth"
+          });
+        }
+      };
+
+      if (currentPage !== "home") {
+        setCurrentPage("home");
+        setTimeout(scrollToElement, 100);
+      } else {
+        scrollToElement();
+      }
+      return;
+    }
+
     setCurrentPage(page);
     if (id) setSelectedNewsId(id);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (

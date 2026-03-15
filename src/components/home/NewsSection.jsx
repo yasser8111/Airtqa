@@ -9,7 +9,7 @@ const NewsSection = ({ limit = 3, onNavigate, title = "آخر الأخبار و�
   return (
     <section className="min-h-[calc(100dvh-80px)] flex flex-col justify-center items-center bg-light/50 py-20" id="News">
       <div className="container-custom relative z-10 w-full px-4">
-        <h2 className="text-4xl font-extrabold text-blue tracking-tight mb-12 reveal">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-blue tracking-tight mb-8 md:mb-12 reveal text-right">
          {title}
         </h2>
 
@@ -22,7 +22,7 @@ const NewsSection = ({ limit = 3, onNavigate, title = "آخر الأخبار و�
         {onNavigate && limit === 3 && (
           <div className="mt-16 text-center reveal reveal-delay-2">
             <Button
-              variant="outline"
+              variant="link"
               className="px-10 py-4 text-lg"
               onClick={() => onNavigate("news")}
             >
