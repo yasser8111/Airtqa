@@ -49,7 +49,36 @@ body {
 html {
   scrollbar-width: thin;
   scrollbar-color: var(--color-blue) transparent;
-  scroll-behavior: smooth;
+  scroll-behavior: auto !important;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+  color: #1e3a8a; /* Default blue text */
+}
+
+/* Lenis CSS recommended for smoothness */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }
 
 /* انيميشن الظهور التدريجي (Scroll Reveal) */
