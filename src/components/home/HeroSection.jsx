@@ -12,27 +12,29 @@ const HeroSection = () => {
       </div>
 
       <div className="relative z-10 container-custom w-full">
-        <h1 className="text-7xl font-bold text-blue leading-tight mb-5">
+        <h1 className="text-7xl font-bold text-blue leading-tight mb-5 reveal">
           لنرتقي
           <br />
           بأخلاقنا وعلمنا
         </h1>
 
-        <p className="text-2xl text-gold font-bold tracking-wide mb-10">
+        <p className="text-2xl text-gold font-bold tracking-wide mb-10 reveal reveal-delay-1">
           Rising with Ethics and Knowledge
         </p>
 
-        <Button
-          variant="primary"
-          className="scale-120"
-          onClick={() =>
-            document
-              .getElementById("Welcome")
-              .scrollIntoView({ behavior: "smooth" })
-          }
-        >
-          ابدأ الان
-        </Button>
+        <div className="reveal reveal-delay-2">
+          <Button
+            variant="primary"
+            className="scale-120"
+            onClick={() =>
+              document
+                .getElementById("Welcome")
+                .scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            ابدأ الان
+          </Button>
+        </div>
       </div>
     </section>
   );

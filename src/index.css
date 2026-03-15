@@ -49,4 +49,24 @@ body {
 html {
   scrollbar-width: thin;
   scrollbar-color: var(--color-blue) transparent;
+  scroll-behavior: smooth;
 }
+
+/* انيميشن الظهور التدريجي (Scroll Reveal) */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.17, 0.55, 0.55, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* تأخير تدريجي للعناصر المتكررة */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }

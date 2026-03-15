@@ -75,7 +75,7 @@ const WelcomeSection = () => {
       <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] bg-size-[24px_24px] opacity-30"></div>
 
       <div className="container-custom relative z-10 px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 reveal">
           <img
             src="/welcame.svg"
             alt="أهلاً وسهلاً"
@@ -87,7 +87,7 @@ const WelcomeSection = () => {
           {items.map((item, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-2xl border-2 border-gray-100 shadow-blue/10 hover:shadow-xl transition-all duration-300 group flex flex-col  hover:-translate-y-1"
+              className={`bg-white p-8 rounded-2xl border-2 border-gray-100 shadow-blue/10 hover:shadow-xl transition-all duration-300 group flex flex-col hover:-translate-y-1 reveal reveal-delay-${index + 1}`}
             >
               <div className="w-16 h-16 rounded-2xl bg-gold/10 flex items-center justify-center text-gold mb-6 group-hover:bg-gold group-hover:text-white transition-all">
                 {item.icon}

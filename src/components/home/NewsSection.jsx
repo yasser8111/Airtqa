@@ -48,15 +48,15 @@ const NewsSection = () => {
   return (
     <section className="min-h-[calc(100dvh-80px)] flex flex-col justify-center items-center bg-light/50" id="News">
       <div className="container-custom relative z-10">
-        <h2 className="text-4xl font-extrabold text-blue tracking-tight mb-12">
+        <h2 className="text-4xl font-extrabold text-blue tracking-tight mb-12 reveal">
           آخر الأخبار والفعاليات
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 lg:gap-10">
-          {newsItems.map((item) => (
+          {newsItems.map((item, index) => (
             <article
-              key={item.id}
-              className="bg-white rounded-2xl overflow-hidden border-2 border-gray-100 shadow-blue/10 hover:shadow-xl transition-all duration-300 group flex flex-col  hover:-translate-y-1 hover:scale-105"
+              key={index}
+              className={`bg-white rounded-2xl overflow-hidden border-2 border-gray-100 shadow-blue/10 hover:shadow-xl transition-all duration-300 group flex flex-col hover:-translate-y-1 hover:scale-105 reveal reveal-delay-${(index % 3) + 1}`}
             >
               {/* Image Container */}
               <div className="relative h-64 overflow-hidden">
@@ -76,7 +76,7 @@ const NewsSection = () => {
           ))}
         </div>
 
-        <div className="mt-4 text-end">
+        <div className="mt-4 text-end reveal reveal-delay-2">
           <Button variant="outline">
             عرض كل الأخبار
           </Button>
