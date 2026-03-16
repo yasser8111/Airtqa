@@ -3,11 +3,9 @@ import Footer from "../components/layout/Footer";
 import newsData from "../constants/news.json";
 import Button from "../components/common/Button";
 
-// استيراد Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
-// استيراد استايلات Swiper
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -21,8 +19,18 @@ function NewsDetails({ onNavigate, newsId }) {
         <Header onNavigate={onNavigate} />
         <main className="flex-1 flex flex-col justify-center items-center p-6 text-center">
           <div className="w-24 h-24 bg-light rounded-full flex items-center justify-center mb-6">
-            <svg className="w-12 h-12 text-blue/20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.172 9.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            <svg
+              className="w-12 h-12 text-blue/20"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9.172 9.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
             </svg>
           </div>
           <h2 className="text-3xl font-bold text-blue mb-6">الخبر غير موجود</h2>
@@ -36,7 +44,10 @@ function NewsDetails({ onNavigate, newsId }) {
   }
 
   return (
-    <div className="bg-white font-sans min-h-screen selection:bg-gold/30" dir="rtl">
+    <div
+      className="bg-white font-sans min-h-screen selection:bg-gold/30"
+      dir="rtl"
+    >
       <Header onNavigate={onNavigate} />
 
       <main className="relative py-6 md:py-20 overflow-hidden">
@@ -52,8 +63,18 @@ function NewsDetails({ onNavigate, newsId }) {
               className=" cursor-pointer flex items-center gap-3 text-blue/60 hover:text-blue group transition-all font-bold text-lg"
             >
               <span className="w-10 h-10 rounded-full border border-blue/10 flex items-center justify-center group-hover:bg-blue group-hover:text-white transition-all">
-                <svg className="w-5 h-5 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                <svg
+                  className="w-5 h-5 rotate-180"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                  />
                 </svg>
               </span>
               العودة للأخبار
@@ -113,8 +134,8 @@ function NewsDetails({ onNavigate, newsId }) {
             <div className="bg-white/50 border-3 border-gray-100 rounded-[2.5rem] p-4 pt-8 sm:p-8 md:p-16">
               <div className="max-w-3xl mx-auto prose prose-xl prose-blue">
                 {newsItem.description.map((para, idx) => (
-                  <p 
-                    key={idx} 
+                  <p
+                    key={idx}
                     className="text-lg md:text-xl text-blue/80 leading-[1.8] mb-8 font-medium last:mb-0 text-justify reveal"
                     style={{ transitionDelay: `${(idx + 3) * 0.1}s` }}
                   >
@@ -126,14 +147,26 @@ function NewsDetails({ onNavigate, newsId }) {
               {/* Share/Footer Section */}
               <div className="mt-16 pt-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-8 text-blue/40">
                 <p className="font-bold flex items-center gap-2">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
                   </svg>
                   تاريخ النشر: {newsItem.date}
                 </p>
                 <div className="flex gap-4">
                   {/* Placeholder for share buttons or extra info */}
-                  <span className="text-sm">مركز الارتقاء الجامعي - قسم الإعلام</span>
+                  <span className="text-sm">
+                    مركز الارتقاء الجامعي - قسم الإعلام
+                  </span>
                 </div>
               </div>
             </div>
