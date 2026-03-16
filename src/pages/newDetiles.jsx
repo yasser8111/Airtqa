@@ -99,7 +99,7 @@ function NewsDetails({ onNavigate, newsId }) {
 
             {/* Main Visual Display */}
             <div className="mb-16 reveal reveal-delay-1 flex justify-center w-full">
-              <div className="relative group rounded-[2rem] overflow-hidden shadow-2xl shadow-blue/10 border border-white/20 w-fit max-w-full">
+              <div className="relative group rounded-4xl overflow-hidden shadow-2xl shadow-blue/10 border border-white/20 w-fit max-w-full">
                 {Array.isArray(newsItem.image) ? (
                   <Swiper
                     modules={[Navigation, Pagination, Autoplay]}
