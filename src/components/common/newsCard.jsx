@@ -22,7 +22,7 @@ const NewsCard = ({ item, index, onNavigate }) => {
         <div className="p-5 flex flex-col flex-1 text-right">
           <span className="text-sm text-gold font-bold mb-2">{item.date}</span>
           <h3 className="text-lg h-[50px] font-medium text-blue mb-1 line-clamp-2 leading-snug">
-            {item.title}
+            {item.title} - {item.description[0].slice(0, 100)}
           </h3>
         </div>
       </article>

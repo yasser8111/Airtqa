@@ -1,12 +1,21 @@
-# Airtqa
+# مركز ارتقاء - Irtiqa Center
 
-This project is a React + Vite application for Airtqa university center.
+مركز ارتقاء هو مشروع مخصص لخدمة الطلاب، يهدف إلى توفير بيئة سكنية وتنموية متكاملة تساعدهم على التميز العلمي والخلقي.
 
-## Technical Details
+## ملخص المشروع
+يسعى مركز ارتقاء إلى الارتقاء بالطلاب من خلال:
+- **توفير سكن مناسب:** تهيئة جو ملائم للدراسة والاستقرار.
+- **التنمية والتأهيل:** الاهتمام ببناء شخصية الطالب وتطوير مهاراته.
+- **الارتقاء القيمي:** التركيز على الجوانب العلمية والسلوكية والثقافية.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **رؤيتنا:** سكن طلابي يعمل على إيصال الخدمات الإنسانية والتنموية للطلاب والارتقاء بهم فكرياً وتربوياً ليشاركوا في بناء مستقبل الوطن.
 
-Currently, two official plugins are available:
+يمكنك زيارة الموقع من خلال الرابط التالي:
+**[Live_Demo](https://irtiqa-center.vercel.app/)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## التكنولوجيا المستخدمة
+- **React.js**: لإناء واجهة مستخدم تفاعلية.
+- **Tailwind CSS**: للتصميم العصري والمتجاوب.
+- **Vite**: كأداة بناء سريعة.
+- **Lenis**: لتجربة تمرير (Scroll) سلسة واحترافية.
+

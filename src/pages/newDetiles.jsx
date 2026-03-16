@@ -95,7 +95,7 @@ function NewsDetails({ onNavigate, newsId }) {
                         <img
                           src={img}
                           alt={`صورة ${idx + 1}`}
-                          className="w-auto h-auto max-h-[85vh] block mx-auto transform hover:scale-105 transition-transform duration-700"
+                          className="w-auto h-auto max-h-[85vh] block mx-auto"
                         />
                       </SwiperSlide>
                     ))}
