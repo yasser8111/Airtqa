@@ -70,7 +70,7 @@ function NewsDetails({ onNavigate, newsId }) {
               <span className="md:hidden inline-block px-4 py-1.5 bg-gold/10 text-gold rounded-full text-sm font-bold mb-4">
                 {newsItem.date}
               </span>
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-blue leading-[1.2] mb-6 reveal">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-blue leading-[1.2] mb-6 reveal">
                 {newsItem.title}
               </h1>
               <div className="h-1.5 w-24 bg-gold rounded-full md:mx-auto"></div>

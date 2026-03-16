@@ -9,7 +9,6 @@ function App() {
   const [selectedNewsId, setSelectedNewsId] = useState(null);
 
   useEffect(() => {
-    // 1. تهيئة Lenis للسكرول الناعم
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -27,9 +26,8 @@ function App() {
 
     requestAnimationFrame(raf);
 
-    // 2. تهيئة أنيميشن الظهور (Reveal)
     const initReveal = () => {
-      const observerOptions = { threshold: 0.5 };
+      const observerOptions = { threshold: 0.1 };
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -45,7 +43,6 @@ function App() {
 
     const observer = initReveal();
 
-    // العودة لأعلى الصفحة عند تغيير الصفحة باستخدام Lenis
     lenis.scrollTo(0, { immediate: true });
 
     return () => {
@@ -57,23 +54,22 @@ function App() {
   const handleNavigate = (page, id = null) => {
     if (page.startsWith("#")) {
       const targetId = page.substring(1);
-      
+
       const scrollToElement = () => {
         const el = document.getElementById(targetId);
         if (el) {
-          // حساب الموقع بحيث يكون العنصر في منتصف الشاشة تقريباً
           const elementRect = el.getBoundingClientRect();
           const absoluteElementTop = elementRect.top + window.pageYOffset;
           const middleOffset = (window.innerHeight - elementRect.height) / 2;
-          
-          // إذا كان العنصر أطول من الشاشة، نكتفي بترك مساحة للهيدر
-          const finalOffset = elementRect.height > window.innerHeight 
-            ? absoluteElementTop - 100 
-            : absoluteElementTop - middleOffset;
+
+          const finalOffset =
+            elementRect.height > window.innerHeight
+              ? absoluteElementTop - 100
+              : absoluteElementTop - middleOffset;
 
           window.scrollTo({
             top: finalOffset,
-            behavior: "smooth"
+            behavior: "smooth",
           });
         }
       };
@@ -94,12 +90,8 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white text-dark font-sans" dir="rtl">
-      {currentPage === "home" && (
-        <Home onNavigate={handleNavigate} />
-      )}
-      {currentPage === "news" && (
-        <NewPage onNavigate={handleNavigate} />
-      )}
+      {currentPage === "home" && <Home onNavigate={handleNavigate} />}
+      {currentPage === "news" && <NewPage onNavigate={handleNavigate} />}
       {currentPage === "details" && (
         <NewsDetails onNavigate={handleNavigate} newsId={selectedNewsId} />
       )}
