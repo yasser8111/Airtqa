@@ -8,7 +8,7 @@ function NewPage({ onNavigate }) {
       <Header onNavigate={onNavigate} />
 
       <main className="flex flex-col">
-        <NewsSection limit={6} onNavigate={onNavigate} title="جميع الاخبار" />
+        <NewsSection limit={10} onNavigate={onNavigate} title="جميع الاخبار" />
       </main>
 
       <Footer />

@@ -21,7 +21,7 @@ const NewsCard = ({ item, index, onNavigate }) => {
 
         <div className="p-5 flex flex-col flex-1 text-right">
           <span className="text-sm text-gold font-bold mb-2">{item.date}</span>
-          <h3 className="text-lg font-medium text-blue mb-1 line-clamp-2 leading-snug">
+          <h3 className="text-lg h-[50px] font-medium text-blue mb-1 line-clamp-2 leading-snug">
             {item.title}
           </h3>
         </div>
