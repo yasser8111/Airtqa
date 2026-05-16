@@ -23,6 +23,7 @@ const NewsCard = ({ item, index }) => {
             src={displayImage}
             alt={item.title}
             className="w-full h-auto block transition-transform duration-700 group-hover:scale-110"
+            loading="lazy"
           />
         </div>
 

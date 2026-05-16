@@ -8,6 +8,7 @@ const HeroSection = () => {
           src="/hero-bg.png"
           alt="Background"
           className="h-full object-contain mr-auto pb-30"
+          fetchpriority="high"
         />
       </div>
 

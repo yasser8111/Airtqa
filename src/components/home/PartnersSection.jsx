@@ -107,6 +107,7 @@ const PartnersSection = () => {
                 src={logo}
                 alt={`Partner ${index + 1}`}
                 className="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-500 opacity-70 hover:opacity-100"
+                loading="lazy"
               />
             </div>
           ))}

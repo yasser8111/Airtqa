@@ -80,6 +80,7 @@ const WelcomeSection = () => {
             src="/welcame.svg"
             alt="أهلاً وسهلاً"
             className="h-24 md:h-28 w-auto mx-auto mb-4"
+            loading="lazy"
           />
         </div>
 

@@ -1,34 +1,16 @@
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
-import Lenis from "lenis";
 import Home from "./pages/Home";
-import News from "./pages/News";
-import NewsDetails from "./pages/NewsDetails";
+
+// Lazy load non-critical pages for code splitting
+const News = lazy(() => import("./pages/News"));
+const NewsDetails = lazy(() => import("./pages/NewsDetails"));
 
 function App() {
   const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: "vertical",
-      gestureOrientation: "vertical",
-      smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 2,
-    });
-
-    let rafId;
-
-    function raf(time) {
-      lenis.raf(time);
-      rafId = requestAnimationFrame(raf);
-    }
-
-    rafId = requestAnimationFrame(raf);
-
     const initReveal = () => {
       const observerOptions = { threshold: 0.1 };
       const observer = new IntersectionObserver((entries) => {
@@ -44,12 +26,13 @@ function App() {
       return observer;
     };
 
-    const observer = initReveal();
+    // Small delay to let DOM settle after route change
+    const timer = setTimeout(() => {
+      initReveal();
+    }, 50);
 
     return () => {
-      cancelAnimationFrame(rafId);
-      lenis.destroy();
-      observer.disconnect();
+      clearTimeout(timer);
     };
   }, [location.pathname]);
 
@@ -101,11 +84,19 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white text-dark font-sans" dir="rtl">
-      <Routes>
-        <Route path="/" element={<Home onNavigate={handleNavigate} />} />
-        <Route path="/news" element={<News onNavigate={handleNavigate} />} />
-        <Route path="/news/:id" element={<NewsDetails onNavigate={handleNavigate} />} />
-      </Routes>
+      <Suspense
+        fallback={
+          <div className="min-h-screen flex items-center justify-center">
+            <div className="w-12 h-12 border-4 border-gray-200 border-t-blue rounded-full animate-spin"></div>
+          </div>
+        }
+      >
+        <Routes>
+          <Route path="/" element={<Home onNavigate={handleNavigate} />} />
+          <Route path="/news" element={<News onNavigate={handleNavigate} />} />
+          <Route path="/news/:id" element={<NewsDetails onNavigate={handleNavigate} />} />
+        </Routes>
+      </Suspense>
     </div>
   );
 }
