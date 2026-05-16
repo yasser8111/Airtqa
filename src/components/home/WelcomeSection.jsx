@@ -88,7 +88,7 @@ const WelcomeSection = () => {
           {items.map((item, index) => (
             <div key={index} className={`reveal reveal-delay-${index + 1}`}>
               <div
-                className="bg-white p-8 rounded-2xl border-2 border-gray-100 shadow-blue/10 hover:shadow-xl transition-all duration-300 group flex flex-col hover:-translate-y-2"
+                className="bg-white p-8 rounded-2xl border-2 border-gray-100 shadow-blue/10 hover:shadow-xl transition-all duration-200 group flex flex-col hover:-translate-y-2"
               >
                 <div className="w-16 h-16 rounded-2xl bg-gold/10 flex items-center justify-center text-gold mb-6 group-hover:bg-gold group-hover:text-white transition-all">
                   {item.icon}
