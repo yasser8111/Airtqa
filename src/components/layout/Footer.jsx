@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -18,16 +19,16 @@ const Footer = () => {
             <h3 className="text-xl font-bold text-blue mb-8">روابط سريعة</h3>
             <ul className="flex flex-col gap-5">
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className="text-blue/60 hover:text-gold transition-colors font-medium"
                 >
                   الرئيسية
-                </a>
+                </Link>
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/#Welcome"
                   className="text-blue/60 hover:text-gold transition-colors font-medium"
                 >
                   من نحن
@@ -35,19 +36,19 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/#contact"
                   className="text-blue/60 hover:text-gold transition-colors font-medium"
                 >
                   التواصل
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/news"
                   className="text-blue/60 hover:text-gold transition-colors font-medium"
                 >
                   الأخبار
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

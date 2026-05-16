@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import Lenis from "lenis";
 import Home from "./pages/Home";
-import NewPage from "./pages/newPage";
-import NewsDetails from "./pages/newDetiles";
+import News from "./pages/News";
+import NewsDetails from "./pages/NewsDetails";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState("home");
-  const [selectedNewsId, setSelectedNewsId] = useState(null);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -19,12 +20,14 @@ function App() {
       touchMultiplier: 2,
     });
 
+    let rafId;
+
     function raf(time) {
       lenis.raf(time);
-      requestAnimationFrame(raf);
+      rafId = requestAnimationFrame(raf);
     }
 
-    requestAnimationFrame(raf);
+    rafId = requestAnimationFrame(raf);
 
     const initReveal = () => {
       const observerOptions = { threshold: 0.1 };
@@ -43,19 +46,20 @@ function App() {
 
     const observer = initReveal();
 
-    lenis.scrollTo(0, { immediate: true });
-
     return () => {
+      cancelAnimationFrame(rafId);
       lenis.destroy();
       observer.disconnect();
     };
-  }, [currentPage, selectedNewsId]);
+  }, [location.pathname]);
 
-  const handleNavigate = (page, id = null) => {
-    if (page.startsWith("#")) {
-      const targetId = page.substring(1);
-
-      const scrollToElement = () => {
+  useEffect(() => {
+    // Scroll to top on route change unless there is a hash
+    if (!location.hash) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const targetId = location.hash.substring(1);
+      setTimeout(() => {
         const el = document.getElementById(targetId);
         if (el) {
           const elementRect = el.getBoundingClientRect();
@@ -72,29 +76,36 @@ function App() {
             behavior: "smooth",
           });
         }
-      };
+      }, 100);
+    }
+  }, [location]);
 
-      if (currentPage !== "home") {
-        setCurrentPage("home");
-        setTimeout(scrollToElement, 100);
+  const handleNavigate = (page, id = null) => {
+    if (page.startsWith("#")) {
+      if (location.pathname !== "/") {
+        navigate(`/${page}`);
       } else {
-        scrollToElement();
+        navigate(page); // Just update hash
       }
       return;
     }
 
-    setCurrentPage(page);
-    if (id) setSelectedNewsId(id);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (page === "home") {
+      navigate("/");
+    } else if (page === "news") {
+      navigate("/news");
+    } else if (page === "details" && id) {
+      navigate(`/news/${id}`);
+    }
   };
 
   return (
     <div className="min-h-screen bg-white text-dark font-sans" dir="rtl">
-      {currentPage === "home" && <Home onNavigate={handleNavigate} />}
-      {currentPage === "news" && <NewPage onNavigate={handleNavigate} />}
-      {currentPage === "details" && (
-        <NewsDetails onNavigate={handleNavigate} newsId={selectedNewsId} />
-      )}
+      <Routes>
+        <Route path="/" element={<Home onNavigate={handleNavigate} />} />
+        <Route path="/news" element={<News onNavigate={handleNavigate} />} />
+        <Route path="/news/:id" element={<NewsDetails onNavigate={handleNavigate} />} />
+      </Routes>
     </div>
   );
 }

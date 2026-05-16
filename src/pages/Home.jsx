@@ -18,7 +18,7 @@ function Home({ onNavigate }) {
         <NewsSection onNavigate={onNavigate} />
         <PartnersSection />
         <StatsSection />
-        {/* <MapSection /> */}
+        <MapSection />
       </main>
 
       <Footer />

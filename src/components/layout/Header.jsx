@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Button from "../common/Button";
 
 function Header({ onNavigate }) {
@@ -27,17 +28,27 @@ function Header({ onNavigate }) {
         <ul className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <li key={item.id}>
-              <a
-                href={item.id}
-                onClick={(e) => {
-                  e.preventDefault();
-                  onNavigate(item.id);
-                  setIsMenuOpen(false);
-                }}
-                className="text-muted hover:text-blue font-semibold transition-colors duration-200"
-              >
-                {item.name}
-              </a>
+              {item.id.startsWith("#") ? (
+                <a
+                  href={`/${item.id}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavigate(item.id);
+                    setIsMenuOpen(false);
+                  }}
+                  className="text-muted hover:text-blue font-semibold transition-colors duration-200"
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <Link
+                  to={item.id === "home" ? "/" : `/${item.id}`}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-muted hover:text-blue font-semibold transition-colors duration-200"
+                >
+                  {item.name}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
@@ -60,18 +71,29 @@ function Header({ onNavigate }) {
         {isMenuOpen && (
           <div className="absolute top-20 left-0 w-full bg-white border-b border-gray-100 py-4 px-4 flex flex-col gap-4 md:hidden shadow-lg animate-in fade-in slide-in-from-top-4">
             {navItems.map((item) => (
-              <a
-                key={item.id}
-                href={item.id}
-                onClick={(e) => {
-                  e.preventDefault();
-                  onNavigate(item.id);
-                  setIsMenuOpen(false);
-                }}
-                className="text-muted hover:text-blue font-semibold py-2 transition-colors"
-              >
-                {item.name}
-              </a>
+              item.id.startsWith("#") ? (
+                <a
+                  key={item.id}
+                  href={`/${item.id}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavigate(item.id);
+                    setIsMenuOpen(false);
+                  }}
+                  className="text-muted hover:text-blue font-semibold py-2 transition-colors"
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <Link
+                  key={item.id}
+                  to={item.id === "home" ? "/" : `/${item.id}`}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-muted hover:text-blue font-semibold py-2 transition-colors"
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
           </div>
         )}

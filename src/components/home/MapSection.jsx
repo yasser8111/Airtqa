@@ -1,11 +1,12 @@
 import React from "react";
-import SectionTitle from "../common/SectionTitle";
 
 const MapSection = () => {
   return (
     <section className="relative h-[500px] w-full bg-gray-200">
-      <div className="absolute top-10 right-10 z-10 p-8 pointer-events-none">
-        <SectionTitle>الخريطة</SectionTitle>
+      <div className="absolute top-10 right-0 left-0 z-10 container-custom px-4 text-right pointer-events-none">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-blue tracking-tight reveal">
+          موقعنا
+        </h2>
       </div>
 
       <iframe

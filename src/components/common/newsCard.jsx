@@ -1,31 +1,42 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const NewsCard = ({ item, index, onNavigate }) => {
+const NewsCard = ({ item, index }) => {
   // Use the first image from the array if available
   const displayImage = Array.isArray(item.image) ? item.image[0] : item.image;
 
   return (
-    <div className={`reveal reveal-delay-${(index % 3) + 1}`}>
-      <article
-        onClick={() => onNavigate && onNavigate("details", item.id)}
-        className="bg-white rounded-2xl overflow-hidden border-2 border-gray-100 shadow-blue/10 hover:shadow-xl transition-all duration-300 group flex flex-col hover:-translate-y-2 hover:scale-[1.02] cursor-pointer"
+    <div className={`reveal reveal-delay-${(index % 3) + 1} h-full`}>
+      <Link
+        to={`/news/${item.id}`}
+        className="bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm shadow-blue/5 hover:shadow-2xl hover:shadow-blue/10 transition-all duration-500 group flex flex-col h-full hover:-translate-y-2 relative"
       >
+        {/* Date Badge */}
+        <div className="absolute top-4 right-4 z-10 bg-white/90 backdrop-blur-sm text-gold font-bold text-xs px-3 py-1.5 rounded-full shadow-sm">
+          {item.date}
+        </div>
+
         {/* Image Container */}
-        <div className="relative h-64 overflow-hidden">
+        <div className="relative w-full overflow-hidden shrink-0">
+          <div className="absolute inset-0 bg-blue/10 group-hover:bg-transparent transition-colors z-0 duration-500 pointer-events-none"></div>
           <img
             src={displayImage}
             alt={item.title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            className="w-full h-auto block transition-transform duration-700 group-hover:scale-110"
           />
         </div>
 
-        <div className="p-5 flex flex-col flex-1 text-right">
-          <span className="text-sm text-gold font-bold mb-2">{item.date}</span>
-          <h3 className="text-lg h-[50px] font-medium text-blue mb-1 line-clamp-2 leading-snug">
-            {item.title} - {item.description[0].slice(0, 100)}
+        <div className="p-6 flex flex-col flex-1 text-right bg-gradient-to-b from-white to-light/30">
+          <h3 className="text-xl font-bold text-blue mb-3 line-clamp-2 leading-snug group-hover:text-gold transition-colors duration-300">
+            {item.title}
           </h3>
+          <p className="text-blue/60 text-sm leading-relaxed line-clamp-3 mb-4 flex-1">
+            {item.description[0]}
+          </p>
+          
+
         </div>
-      </article>
+      </Link>
     </div>
   );
 };
