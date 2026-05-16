@@ -9,7 +9,7 @@ function News({ onNavigate }) {
       <Header onNavigate={onNavigate} />
 
       <main className="flex flex-col flex-1">
-        <div className="container-custom mt-6 reveal">
+        <div className="container-custom mt-6 reveal w-full text-right">
           <Breadcrumbs />
         </div>
         <NewsSection limit={10} onNavigate={onNavigate} title="جميع الاخبار" />

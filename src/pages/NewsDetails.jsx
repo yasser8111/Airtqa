@@ -61,7 +61,7 @@ function NewsDetails({ onNavigate }) {
 
       <main className="flex-1 pb-20">
         {/* Breadcrumbs Section */}
-        <div className="container-custom px-4 md:px-8 mt-6">
+        <div className="container-custom px-4 md:px-8 mt-6 w-full text-right">
           <Breadcrumbs customTitles={customBreadcrumbTitles} />
         </div>
 

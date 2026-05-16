@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
+import Counter from "../common/Counter";
 
-const CountUp = ({ end, duration = 2000 }) => {
-  const [count, setCount] = useState(0);
+const StatCounter = ({ end, fontSize }) => {
+  const [value, setValue] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-  const countRef = useRef(null);
+  const containerRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -15,33 +16,51 @@ const CountUp = ({ end, duration = 2000 }) => {
       { threshold: 0.1 }
     );
 
-    if (countRef.current) {
-      observer.observe(countRef.current);
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
     }
 
     return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
-    if (!isVisible) return;
+    if (isVisible) {
+      // Small timeout to coordinate with the parent section's fade-in/reveal effect
+      const timer = setTimeout(() => {
+        setValue(parseInt(end, 10));
+      }, 300);
+      return () => clearTimeout(timer);
+    } else {
+      setValue(0);
+    }
+  }, [isVisible, end]);
 
-    let start = 0;
-    const endValue = parseInt(end);
-    if (start === endValue) return;
+  // Compute fixed places based on the final target number to keep container widths static.
+  // This prevents layout jumps during rolling and aligns the digits beautifully.
+  const endStr = end.toString();
+  const places = [...endStr].map((ch, i, a) => {
+    if (ch === ".") return ".";
+    return 10 ** (a.length - i - 1);
+  });
 
-    let totalMiliseconds = duration;
-    let incrementTime = (totalMiliseconds / endValue);
-
-    let timer = setInterval(() => {
-      start += 1;
-      setCount(start);
-      if (start === endValue) clearInterval(timer);
-    }, incrementTime);
-
-    return () => clearInterval(timer);
-  }, [isVisible, end, duration]);
-
-  return <span ref={countRef}>{count}</span>;
+  return (
+    <span ref={containerRef} className="inline-flex items-center select-none" style={{ direction: "ltr" }}>
+      <Counter
+        value={value}
+        places={places}
+        fontSize={fontSize}
+        textColor="#0a4979" // matching the --color-blue theme color
+        fontWeight="bold"
+        borderRadius={0}
+        padding={0}
+        gap={0}
+        horizontalPadding={0}
+        gradientHeight={fontSize * 0.15} // responsive gradient fade height
+        gradientFrom="#fafbfc" // matches the bg-light/30 overlaid on white body background
+        gradientTo="transparent"
+      />
+    </span>
+  );
 };
 
 const stats = [
@@ -51,6 +70,24 @@ const stats = [
 ];
 
 const StatsSection = () => {
+  const [fontSize, setFontSize] = useState(48);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setFontSize(72); // lg:text-7xl
+      } else if (window.innerWidth >= 768) {
+        setFontSize(60); // md:text-6xl
+      } else {
+        setFontSize(48); // text-5xl
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section className="min-h-[40vh] md:min-h-[60vh] flex flex-col justify-center items-center bg-light/30 py-16 md:py-24 overflow-hidden">
       <div className="container-custom w-full">
@@ -58,8 +95,12 @@ const StatsSection = () => {
           {stats.map((stat, index) => (
             <div key={index} className={`reveal reveal-delay-${index + 1} w-full`}>
               <div className="flex flex-col items-center gap-3 md:gap-5 text-center px-4">
-                <span className="text-5xl md:text-6xl lg:text-7xl font-bold text-blue leading-none">
-                  <CountUp end={stat.value} />+
+                <span 
+                  className="flex items-center justify-center font-bold text-blue leading-none select-none" 
+                  style={{ fontSize: `${fontSize}px`, direction: "ltr" }}
+                >
+                  <StatCounter end={stat.value} fontSize={fontSize} />
+                  <span>+</span>
                 </span>
                 <span className="text-xl md:text-2xl font-bold text-blue/40 tracking-wide uppercase">
                   {stat.label}

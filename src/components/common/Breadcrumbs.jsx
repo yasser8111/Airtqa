@@ -11,8 +11,8 @@ const Breadcrumbs = ({ customTitles }) => {
   };
 
   return (
-    <nav className="mb-6 pt-4 text-sm md:text-base font-medium">
-      <ol className="flex items-center gap-2">
+    <nav className="mb-6 pt-4 text-sm md:text-base font-medium w-full text-right" dir="rtl">
+      <ol className="flex flex-wrap items-center justify-start gap-2 w-full text-right">
         <li>
           <Link
             to="/"
