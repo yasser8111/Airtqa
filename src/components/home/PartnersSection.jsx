@@ -90,8 +90,8 @@ const PartnersSection = () => {
 
       <div className="w-full relative py-8 overflow-hidden" dir="ltr">
         {/* Gradient fades on the edges for a professional look */}
-        <div className="absolute top-0 bottom-0 left-0 w-24 md:w-48 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute top-0 bottom-0 right-0 w-24 md:w-48 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute top-0 bottom-0 left-0 w-24 md:w-48 bg-linear-to-r from-white to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute top-0 bottom-0 right-0 w-24 md:w-48 bg-linear-to-l from-white to-transparent z-10 pointer-events-none"></div>
 
         <div
           ref={containerRef}
@@ -101,7 +101,7 @@ const PartnersSection = () => {
           {[...partnerLogos, ...partnerLogos].map((logo, index) => (
             <div
               key={index}
-              className="flex-shrink-0 flex items-center justify-center p-6 md:p-8 bg-light/50 rounded-[2.5rem] hover:bg-light transition-colors duration-300 w-48 h-48 md:w-64 md:h-64"
+              className="shrink flex items-center justify-center p-6 md:p-8 bg-light/50 rounded-[2.5rem] hover:bg-light transition-colors duration-300 w-48 h-48 md:w-64 md:h-64"
             >
               <img
                 src={logo}

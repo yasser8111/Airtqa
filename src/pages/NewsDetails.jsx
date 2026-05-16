@@ -71,14 +71,14 @@ function NewsDetails({ onNavigate }) {
             
             {/* Right side: Two static images (Desktop Only) */}
             <div className="hidden lg:flex flex-col gap-4 lg:gap-6 col-span-1 h-full">
-              <div className="flex-1 rounded-[2rem] overflow-hidden bg-black relative shadow-2xl shadow-blue/10 flex items-center justify-center">
+              <div className="flex-1 rounded-4xl overflow-hidden bg-black relative shadow-2xl shadow-blue/10 flex items-center justify-center">
                 <img
                   src={images[1] || images[0]}
                   alt="صورة إضافية 1"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
-              <div className="flex-1 rounded-[2rem] overflow-hidden bg-black relative shadow-2xl shadow-blue/10 flex items-center justify-center">
+              <div className="flex-1 rounded-4xl overflow-hidden bg-black relative shadow-2xl shadow-blue/10 flex items-center justify-center">
                 <img
                   src={images[2] || images[0]}
                   alt="صورة إضافية 2"
@@ -88,7 +88,7 @@ function NewsDetails({ onNavigate }) {
             </div>
 
             {/* Left side: Swiper Main Image */}
-            <div className="col-span-1 lg:col-span-2 relative rounded-[2rem] overflow-hidden shadow-2xl shadow-blue/10 bg-black lg:h-[600px]">
+            <div className="col-span-1 lg:col-span-2 relative rounded-4xl overflow-hidden shadow-2xl shadow-blue/10 bg-black lg:h-[600px]">
               <Swiper
                 modules={[Navigation, Pagination, Autoplay, EffectFade]}
                 effect="fade"

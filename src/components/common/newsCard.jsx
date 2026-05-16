@@ -27,7 +27,7 @@ const NewsCard = ({ item, index }) => {
           />
         </div>
 
-        <div className="p-6 flex flex-col flex-1 text-right bg-gradient-to-b from-white to-light/30">
+        <div className="p-6 flex flex-col flex-1 text-right bg-linear-to-b from-white to-light/30">
           <h3 className="text-xl font-bold text-blue mb-3 line-clamp-2 leading-snug group-hover:text-gold transition-colors duration-200">
             {item.title}
           </h3>
