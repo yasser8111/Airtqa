@@ -98,7 +98,7 @@ function Header({ onNavigate }) {
           </div>
         )}
 
-        <div className="hidden md:block">
+        <div className="hidden md:block ml-4 lg:ml-8">
           <Button variant="primary">سجل الآن</Button>
         </div>
       </nav>

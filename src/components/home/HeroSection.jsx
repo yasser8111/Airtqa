@@ -33,7 +33,7 @@ const HeroSection = () => {
                 .scrollIntoView({ behavior: "smooth" })
             }
           >
-            ابدأ الان
+            <span className="text-white font-bold">اكتشف المزيد</span>
           </Button>
         </div>
       </div>

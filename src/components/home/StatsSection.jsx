@@ -102,7 +102,7 @@ const StatsSection = () => {
                   <StatCounter end={stat.value} fontSize={fontSize} />
                   <span>+</span>
                 </span>
-                <span className="text-xl md:text-2xl font-bold text-blue/40 tracking-wide uppercase">
+                <span className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue/40 tracking-wide uppercase">
                   {stat.label}
                 </span>
               </div>

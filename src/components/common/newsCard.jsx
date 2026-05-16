@@ -31,7 +31,7 @@ const NewsCard = ({ item, index }) => {
           <h3 className="text-xl font-bold text-blue mb-3 line-clamp-2 leading-snug group-hover:text-gold transition-colors duration-200">
             {item.title}
           </h3>
-          <p className="text-blue/60 text-sm leading-relaxed line-clamp-3 mb-4 flex-1">
+          <p className="text-blue/80 font-medium text-sm leading-relaxed line-clamp-3 mb-4 flex-1">
             {item.description[0]}
           </p>
           
