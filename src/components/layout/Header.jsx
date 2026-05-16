@@ -54,15 +54,30 @@ function Header({ onNavigate }) {
         </ul>
 
         {/* Mobile Menu Button - Added for completeness and to use setIsMenuOpen */}
-        <button 
+        <button
           className="md:hidden p-2 text-blue z-50"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
             {isMenuOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
             ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             )}
           </svg>
         </button>
@@ -70,7 +85,7 @@ function Header({ onNavigate }) {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="absolute top-20 left-0 w-full bg-white border-b border-gray-100 py-4 px-4 flex flex-col gap-4 md:hidden shadow-lg animate-in fade-in slide-in-from-top-4">
-            {navItems.map((item) => (
+            {navItems.map((item) =>
               item.id.startsWith("#") ? (
                 <a
                   key={item.id}
@@ -93,8 +108,8 @@ function Header({ onNavigate }) {
                 >
                   {item.name}
                 </Link>
-              )
-            ))}
+              ),
+            )}
           </div>
         )}
 
