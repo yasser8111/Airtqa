@@ -16,7 +16,7 @@ const Button = ({
 
   const sizes = {
     normal: "px-6 py-2 text-base",
-    large: "px-8 py-3 md:px-10 md:py-4 text-lg md:text-xl shadow-lg hover:shadow-xl hover:-translate-y-1",
+    large: "px-8 py-2.5 md:px-8 md:py-3 text-lg",
   };
 
   return (
