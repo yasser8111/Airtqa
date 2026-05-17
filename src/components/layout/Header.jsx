@@ -14,7 +14,7 @@ function Header({ onNavigate }) {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/90 backdrop-blur-md">
-      <nav className="container-custom h-20 flex justify-between items-center px-4 relative">
+      <nav className="container-custom h-20 flex justify-between items-center relative">
         <div
           className="flex items-center gap-2 cursor-pointer relative z-50"
           onClick={() => {
@@ -113,7 +113,7 @@ function Header({ onNavigate }) {
           </div>
         )}
 
-        <div className="hidden md:block ml-4 lg:ml-8">
+        <div className="hidden md:block ml-8 lg:ml-16">
           <Button variant="primary">سجل الآن</Button>
         </div>
       </nav>
