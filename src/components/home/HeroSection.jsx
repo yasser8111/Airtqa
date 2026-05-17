@@ -26,7 +26,7 @@ const HeroSection = () => {
         <div className="reveal reveal-delay-2 flex justify-start mt-4">
           <Button
             variant="primary"
-            className="text-lg md:text-xl px-8 py-3 md:px-10 md:py-4 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all"
+            size="large"
             onClick={() =>
               document
                 .getElementById("Welcome")
