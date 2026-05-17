@@ -1,4 +1,4 @@
-import { useEffect, lazy, Suspense } from "react";
+import React, { useEffect, lazy, Suspense, useRef } from "react";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 
@@ -36,7 +36,28 @@ function App() {
     };
   }, [location.pathname]);
 
+  const isFirstLoad = useRef(true);
+
   useEffect(() => {
+    // Disable browser automatic scroll restoration
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+  }, []);
+
+  useEffect(() => {
+    // If it's the very first time the page loads, force it to the top
+    if (isFirstLoad.current) {
+      isFirstLoad.current = false;
+      window.scrollTo(0, 0);
+      
+      // Clean up the URL if there's a hash so it looks fresh
+      if (window.location.hash) {
+        window.history.replaceState(null, "", window.location.pathname);
+      }
+      return;
+    }
+
     // Scroll to top on route change unless there is a hash
     if (!location.hash) {
       window.scrollTo({ top: 0, behavior: "smooth" });
